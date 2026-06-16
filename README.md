@@ -4,34 +4,32 @@ This repository is for the Educational Practice project.
 
 ## Team Information
 
-Academic group:
+Academic group: IT-2516
 
-Team name:
+Team name: Whatever
 
 Project track:
-- Web CRUD / Machine Learning / Deep Learning
+- Web Project
 
-Project topic:
+Project topic: Product Catalog
 
 ## Team Members
 
-| No. | Full Name | Role / Contribution |
-|---|---|---|
-| 1 |  |  |
-| 2 |  |  |
-| 3 |  |  |
-| 4 |  |  |
+| No. | Full Name         | Role / Contribution |
+|-----|-------------------|---------------------|
+|  1  | Adil Dyussenov    |        Leader       |
+|  2  | Ilyas Yermekbayev |         dev1        |
+|  3  | Tamerlan Aitken   |         dev2        |
+|  4  | Yerassyl Kenzhe   |         dev3        |
 
 ## Project Description
 
-Briefly describe your project here.
+A product catalog that offers the basic functionality of CRUD and search with filters.
 
 ## How to Run
 
-```bash
-pip install -r requirements.txt
-python src/main.py
-```
+download the project
+and just open the html file
 
 ## Demo Video
 
