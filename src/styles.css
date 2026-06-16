@@ -1,0 +1,182 @@
+:root {
+  --bg: #f5f8fd;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --danger: #dc2626;
+  --success: #16a34a;
+  --border: #d1d5db;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #eff6ff 0%, #f8fafc 100%);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+header {
+  margin-bottom: 24px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+}
+
+p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.controls,
+.form-section,
+.table-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.search-filter {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, 180px);
+  gap: 12px;
+}
+
+.search-filter input,
+.search-filter select,
+#productForm input,
+#productForm select,
+#productForm textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: #fff;
+  color: var(--text);
+}
+
+#productForm textarea {
+  resize: vertical;
+}
+
+.form-section h2,
+.table-section h2 {
+  margin-top: 0;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button#submitButton {
+  background: var(--primary);
+  color: white;
+}
+
+button.secondary {
+  background: #eef2ff;
+  color: var(--text);
+}
+
+button.hidden {
+  display: none;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+tbody tr:hover {
+  background: #f8fbff;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  background: #f1f5f9;
+}
+
+.tag.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.tag.danger {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.action-buttons button {
+  padding: 8px 10px;
+  font-size: 0.9rem;
+}
+
+button.edit {
+  background: #f59e0b;
+  color: white;
+}
+
+button.delete {
+  background: var(--danger);
+  color: white;
+}
+
+@media (max-width: 760px) {
+  .search-filter {
+    grid-template-columns: 1fr;
+  }
+}

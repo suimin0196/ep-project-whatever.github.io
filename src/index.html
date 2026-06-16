@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Catalog</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
+  <div class="container">
+    <header>
+      <h1>Product Catalog</h1>
+      <p>Manage products with create, read, update, delete, search, and filters.</p>
+    </header>
+
+    <section class="controls">
+      <div class="search-filter">
+        <input id="searchInput" type="search" placeholder="Search products..." />
+        <select id="categoryFilter">
+          <option value="">All categories</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Home">Home</option>
+          <option value="Garden">Garden</option>
+          <option value="Office">Office</option>
+          <option value="Clothing">Clothing</option>
+        </select>
+        <select id="availabilityFilter">
+          <option value="">All availability</option>
+          <option value="In stock">In stock</option>
+          <option value="Out of stock">Out of stock</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2 id="formTitle">Add Product</h2>
+      <form id="productForm">
+        <input id="nameInput" type="text" placeholder="Product name" required />
+        <input id="priceInput" type="number" step="0.01" placeholder="Price" required />
+        <input id="categoryInput" type="text" placeholder="Category" required />
+        <select id="availabilityInput" required>
+          <option value="In stock">In stock</option>
+          <option value="Out of stock">Out of stock</option>
+        </select>
+        <textarea id="descriptionInput" rows="3" placeholder="Description"></textarea>
+        <div class="form-actions">
+          <button type="submit" id="submitButton">Save Product</button>
+          <button type="button" id="cancelButton" class="secondary hidden">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="table-section">
+      <h2>Products</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Availability</th>
+              <th>Description</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="productTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
