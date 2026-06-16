@@ -17,10 +17,10 @@ Project topic: Product Catalog
 
 | No. | Full Name         | Role / Contribution |
 |-----|-------------------|---------------------|
-|  1  | Adil Dyussenov    |        Leader       |
-|  2  | Ilyas Yermekbayev |         dev1        |
-|  3  | Tamerlan Aitken   |         dev2        |
-|  4  | Yerassyl Kenzhe   |         dev3        |
+|  1  | Adil Dyussenov    |    Leader + dev 1   |
+|  2  | Ilyas Yermekbayev |     Final report    |
+|  3  | Tamerlan Aitken   | Recording + Testing |
+|  4  | Yerassyl Kenzhe   |        dev 2        |
 
 ## Project Description
 
@@ -33,8 +33,8 @@ and just open the html file
 
 ## Demo Video
 
-Paste demo video link here.
+Demo link will be here soon
 
 ## Report
 
-The final report must be submitted on Moodle as PDF.
+The final report will be submitted on Moodle as PDF.
