@@ -19,7 +19,7 @@ Project topic: Product Catalog
 |-----|-------------------|---------------------|
 |  1  | Adil Dyussenov    |    Leader + dev 1   |
 |  2  | Ilyas Yermekbayev |     Final report    |
-|  3  | Tamerlan Aitken   | Recording + Testing |
+|  3  | Tamerlan Aitken   |     CSS + Testing   |
 |  4  | Yerassyl Kenzhe   |        dev 2        |
 
 ## Project Description
