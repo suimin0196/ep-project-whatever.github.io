@@ -28,12 +28,13 @@ A product catalog that offers the basic functionality of CRUD and search with fi
 
 ## How to Run
 
-download the project
-and just open the html file
+> open the [link](https://suimin0196.github.io/ep-project-whatever.github.io/src/)
+or
+> download the project and just open the html file in the 'src' folder
 
 ## Demo Video
 
-Demo link will be here soon
+>Link to the [demo video](https://youtu.be/Ax9o3s-25Kk)
 
 ## Report
 
