@@ -2,6 +2,7 @@ const productForm = document.getElementById('productForm');
 const nameInput = document.getElementById('nameInput');
 const priceInput = document.getElementById('priceInput');
 const categoryInput = document.getElementById('categoryInput');
+const categorySuggestions = document.getElementById('categorySuggestions');
 const availabilityInput = document.getElementById('availabilityInput');
 const descriptionInput = document.getElementById('descriptionInput');
 const productTableBody = document.getElementById('productTableBody');
@@ -14,6 +15,8 @@ const cancelButton = document.getElementById('cancelButton');
 
 let products = [];
 let editingId = null;
+let categories = ['Electronics', 'Home', 'Garden', 'Office', 'Clothing'];
+const availabilityOptions = ['In stock', 'Out of stock'];
 
 function loadProducts() {
   const saved = localStorage.getItem('productCatalogItems');
@@ -22,6 +25,7 @@ function loadProducts() {
     products = generateRandomProducts(20);
     saveProducts();
   }
+  updateCategoryOptions();
 }
 
 function saveProducts() {
@@ -29,8 +33,6 @@ function saveProducts() {
 }
 
 function generateRandomProducts(count) {
-  const categories = ['Electronics', 'Home', 'Garden', 'Office', 'Clothing'];
-  const availabilityOptions = ['In stock', 'Out of stock'];
   const productNames = [
     'Wireless Mouse',
     'Noise-Cancelling Headphones',
@@ -93,6 +95,27 @@ function resetForm() {
   cancelButton.classList.add('hidden');
 }
 
+function updateCategoryOptions() {
+  const currentFilterValue = categoryFilter.value;
+  const defaultCategories = ['Electronics', 'Home', 'Garden', 'Office', 'Clothing'];
+  const productCategories = products
+    .map((product) => product.category.trim())
+    .filter(Boolean);
+
+  categories = Array.from(new Set([...defaultCategories, ...productCategories])).sort((a, b) => a.localeCompare(b));
+
+  categoryFilter.innerHTML = '<option value="">All categories</option>' +
+    categories.map((category) => `<option value="${category}">${category}</option>`).join('');
+
+  categorySuggestions.innerHTML = categories.map((category) => `<option value="${category}"></option>`).join('');
+
+  if (categories.includes(currentFilterValue)) {
+    categoryFilter.value = currentFilterValue;
+  } else {
+    categoryFilter.value = '';
+  }
+}
+
 function getFilteredProducts() {
   const query = searchInput.value.trim().toLowerCase();
   const category = categoryFilter.value;
@@ -146,12 +169,14 @@ function renderProducts() {
 function addProduct(product) {
   products.push(product);
   saveProducts();
+  updateCategoryOptions();
   renderProducts();
 }
 
 function updateProduct(updated) {
   products = products.map((product) => (product.id === updated.id ? updated : product));
   saveProducts();
+  updateCategoryOptions();
   renderProducts();
 }
 
@@ -159,6 +184,7 @@ function deleteProduct(id) {
   if (!confirm('Delete this product?')) return;
   products = products.filter((product) => product.id !== id);
   saveProducts();
+  updateCategoryOptions();
   renderProducts();
   if (editingId === id) resetForm();
 }
