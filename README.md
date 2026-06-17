@@ -26,6 +26,10 @@ Project topic: Product Catalog
 
 A product catalog that offers the basic functionality of CRUD and search with filters.
 
+## Notes
+
+The repository clone is not set to be private, as it will not allow the repository to be published on github pages for the demo version
+
 ## How to Run
 
 > open the [link](https://suimin0196.github.io/ep-project-whatever.github.io/src/)
