@@ -1,6 +1,6 @@
 # Educational Practice Mini-Project
 
-This repository is for the Educational Practice project.
+This repository is a clone of the repository for the Educational Practice project from the [github classroom](https://github.com/aitu-educational-practice-2026/educational-practice-project-whatever#).
 
 ## Team Information
 
